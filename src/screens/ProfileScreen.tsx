@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-navigation';
 import { tabBarHeight } from '../utils';
 
 
-export const Home: React.FC = () => {
+export const ProfileScreen: React.FC = () => {
   const data = useMemo(() => new Array(10), []);
 
   return (

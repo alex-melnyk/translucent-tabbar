@@ -3,8 +3,8 @@ import { ScrollView, View } from 'react-native';
 import { createAppContainer } from 'react-navigation';
 import { BottomTabBar, createBottomTabNavigator } from 'react-navigation-tabs';
 import { BlurView } from 'expo-blur';
-import { TabBarIcon } from './src/components';
-import { Home } from './src/screens';
+import { ControlStrip, TabBarIcon } from './src/components';
+import { HomeScreen, ProfileScreen, SettingsScreen } from './src/screens';
 
 
 const BlankScreen: React.FC = () => (
@@ -19,7 +19,7 @@ const BlankScreen: React.FC = () => (
 
 const MainTabBar = createBottomTabNavigator({
   Home: {
-    screen: Home,
+    screen: HomeScreen,
     navigationOptions: {
       tabBarLabel: 'Home',
       tabBarIcon: ({ tintColor }) => (
@@ -28,7 +28,7 @@ const MainTabBar = createBottomTabNavigator({
     }
   },
   Profile: {
-    screen: BlankScreen,
+    screen: ProfileScreen,
     navigationOptions: {
       tabBarLabel: 'Profile',
       tabBarIcon: ({ tintColor }) => (
@@ -37,7 +37,7 @@ const MainTabBar = createBottomTabNavigator({
     }
   },
   Settings: {
-    screen: BlankScreen,
+    screen: SettingsScreen,
     navigationOptions: {
       tabBarLabel: 'Settings',
       tabBarIcon: ({ tintColor }) => (
@@ -47,12 +47,7 @@ const MainTabBar = createBottomTabNavigator({
   },
 }, {
   tabBarOptions: {
-    inactiveBackgroundColor: 'transparent',
-    activeBackgroundColor: 'transparent',
-    activeTintColor: '#FFFFFF',
-    inactiveTintColor: '#999999',
     style: {
-      // borderTopWidth: 0,
       borderTopColor: '#666666',
       backgroundColor: 'transparent'
     }
@@ -65,10 +60,10 @@ const MainTabBar = createBottomTabNavigator({
         left: 0,
         right: 0,
       }}
-      tint="dark"
+      tint="light"
       intensity={100}
     >
-      <View style={{ height: 0 }}/>
+      <ControlStrip />
       <BottomTabBar {...props} />
     </BlurView>
   )
