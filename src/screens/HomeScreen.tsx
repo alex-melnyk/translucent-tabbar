@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { FlatList, Text, View } from 'react-native';
-import { SafeAreaView } from 'react-navigation';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { randomColor, tabBarHeight } from '../utils';
 import { styles } from './Styles';
 
@@ -13,7 +13,6 @@ export const HomeScreen: React.FC = () => {
   return (
     <SafeAreaView
       style={styles.container}
-      forceInset={{ top: 'always', bottom: 'never' }}
     >
       <Text style={styles.screenTitle}>
         Home
@@ -31,13 +30,13 @@ export const HomeScreen: React.FC = () => {
             }]}
           >
 
-            <View style={styles.mockLineSm} />
-            <View style={styles.mockLineSm} />
-            <View style={styles.mockLineSm} />
-            <View style={styles.mockLineEmpty} />
-            <View style={styles.mockLineLg} />
-            <View style={styles.mockLineLg} />
-            <View style={styles.mockLineLg} />
+            <View style={styles.mockLineSm}/>
+            <View style={styles.mockLineSm}/>
+            <View style={styles.mockLineSm}/>
+            <View style={styles.mockLineEmpty}/>
+            <View style={styles.mockLineLg}/>
+            <View style={styles.mockLineLg}/>
+            <View style={styles.mockLineLg}/>
           </View>
         )}
       >

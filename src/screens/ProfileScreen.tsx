@@ -1,9 +1,7 @@
 import React, { useMemo } from 'react';
-import { FlatList, Text, View } from 'react-native';
-import { SafeAreaView } from 'react-navigation';
+import { FlatList, SafeAreaView, Text, View } from 'react-native';
 import { randomColor, tabBarHeight } from '../utils';
 import { styles } from './Styles';
-
 
 export const ProfileScreen: React.FC = () => {
   const data = useMemo(() => [...new Array(20)].map(() => ({
@@ -13,7 +11,6 @@ export const ProfileScreen: React.FC = () => {
   return (
     <SafeAreaView
       style={styles.container}
-      forceInset={{ top: 'always', bottom: 'never' }}
     >
       <Text style={styles.screenTitle}>
         Profile
@@ -31,13 +28,13 @@ export const ProfileScreen: React.FC = () => {
               backgroundColor: item.color
             }]}
           >
-            <View style={styles.mockLineMd} />
-            <View style={styles.mockLineMd} />
-            <View style={styles.mockLineMd} />
-            <View style={styles.mockLineEmpty} />
-            <View style={styles.mockLineLg} />
-            <View style={styles.mockLineLg} />
-            <View style={styles.mockLineSm} />
+            <View style={styles.mockLineMd}/>
+            <View style={styles.mockLineMd}/>
+            <View style={styles.mockLineMd}/>
+            <View style={styles.mockLineEmpty}/>
+            <View style={styles.mockLineLg}/>
+            <View style={styles.mockLineLg}/>
+            <View style={styles.mockLineSm}/>
           </View>
         )}
       >
