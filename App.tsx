@@ -6,17 +6,6 @@ import { BlurView } from 'expo-blur';
 import { ControlStrip, TabBarIcon } from './src/components';
 import { HomeScreen, ProfileScreen, SettingsScreen } from './src/screens';
 
-
-const BlankScreen: React.FC = () => (
-  <ScrollView
-    contentContainerStyle={{
-      flexGrow: 1
-    }}
-  >
-
-  </ScrollView>
-);
-
 const MainTabBar = createBottomTabNavigator({
   Home: {
     screen: HomeScreen,

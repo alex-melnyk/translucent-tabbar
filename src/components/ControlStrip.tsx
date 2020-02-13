@@ -1,13 +1,16 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
+import { CONTROL_STRIP_HEIGHT } from '../utils';
+
+const ICON_SIZE = CONTROL_STRIP_HEIGHT - 20;
 
 export const ControlStrip: React.FC = () => {
-
   return (
     <View
       style={{
-        padding: 10,
+        paddingHorizontal: 10,
+        height: CONTROL_STRIP_HEIGHT,
         flexDirection: 'row',
         alignItems: 'center'
       }}
@@ -16,8 +19,8 @@ export const ControlStrip: React.FC = () => {
         style={{
           alignItems: 'center',
           justifyContent: 'center',
-          width: 50,
-          height: 50,
+          width: ICON_SIZE,
+          height: ICON_SIZE,
           borderRadius: 5,
           backgroundColor: '#0000000F'
         }}
